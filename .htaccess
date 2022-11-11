@@ -96,20 +96,20 @@ Header append Vary User-Agent env=!dont-vary
 <IfModule mod_headers.c>
 <FilesMatch "\.(ico|pdf|jpg|jpeg|png|gif|webp|avif|woff|woff2)$">
 # 3 months
-Header set Cache-Control "max-age=7776000, public"
+Header set Cache-Control "max-age=7776000, private"
 </FilesMatch>
 <FilesMatch "\.(css)$">
 # 3 months
-Header set Cache-Control "max-age=7776000, public"
+Header set Cache-Control "max-age=7776000, private"
 </FilesMatch>
 <FilesMatch "\.(js)$">
 Header set Cache-Control "max-age=216000, private"
 </FilesMatch>
 <FilesMatch "\.(xml|txt)$">
-Header set Cache-Control "max-age=172800, public, must-revalidate"
+Header set Cache-Control "max-age=172800, private"
 </FilesMatch>
 <FilesMatch "\.(html|htm)$">
-Header set Cache-Control "max-age=7200, must-revalidate"
+Header set Cache-Control "max-age=7200, private"
 </FilesMatch>
 </IfModule>
 
